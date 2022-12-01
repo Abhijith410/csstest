@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orkut</title>
-    <link href="style.css" type="text/css" rel="stylesheet"/>
+    <link href="{% static 'style.css' %}" type="text/css" rel="stylesheet"/>
+    
 </head>
 <body>
     <div>
         <ul id="ul">
             <li id="li"><a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Logo_ORKUT.svg/2560px-Logo_ORKUT.svg.png" alt="" width="100px" height="30px"></a></li>
-            <li style="float:right"><a class="active" href="messages.html">Messages</a>
-            <li style="float:right"><a class="active" href="profile.html">Profile</a>
-            <li style="float:right"><a class="active" href="media.html">Home</a>
+            <li style="float:right"><a class="active" href="{% url 'message' %}">Messages</a>
+            <li style="float:right"><a class="active" href="{% url 'profile' %}">Profile</a>
+            <li style="float:right"><a class="active" href="{% url 'media' %}">Home</a>
           </ul>
     </div>
     <div id="body">
